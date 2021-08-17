@@ -1,6 +1,7 @@
 const { fromEuroToDollar, fromDollarToYen, fromYanToPound } = require('../app.js')
 
 describe('Testing over currencies converters', () => {
+   // Euro to Dollar
    describe('EUR-USD', () => {
       test('must return an object with ammount, currency, symbol and mode properties', function () {
          expect(typeof (fromEuroToDollar())).toBe('object')
@@ -12,6 +13,9 @@ describe('Testing over currencies converters', () => {
    
       test('1 Eur must return 1.2 USD', function () {
          expect(fromEuroToDollar(1).ammount).toBe(1.2)
+      })
+      test('4 Eur must return 4.8 USD', function () {
+         expect(fromEuroToDollar(4).ammount).toBe(4.8)
       })
       test('If receive a string must return 0 as ammount', function () {
          expect(fromEuroToDollar('this is a long text').ammount).toBe(0)
@@ -36,6 +40,7 @@ describe('Testing over currencies converters', () => {
          expect(fromEuroToDollar().symbol).toBe('$')
       })
    })
+   // Dollar to Yen
    describe('USD-JPY', () => {
       test('must return an object with ammount, currency, symbol and mode properties', function () {
          expect(typeof (fromDollarToYen())).toBe('object')
@@ -70,6 +75,7 @@ describe('Testing over currencies converters', () => {
          expect(fromDollarToYen().symbol).toBe('¥')
       })
    })
+   // Yen to BG-Pound
    describe('JPY-GBP', () => {
       test('must return an object with ammount, currency, symbol and mode properties', function () {
          expect(typeof (fromYanToPound())).toBe('object')
