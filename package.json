@@ -1,0 +1,23 @@
+{
+  "name": "4geeks-jest-unit-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asiz15/4geeks-jest-unit-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asiz15/4geeks-jest-unit-testing/issues"
+  },
+  "homepage": "https://github.com/asiz15/4geeks-jest-unit-testing#readme",
+  "dependencies": {
+    "jest": "^27.0.6"
+  }
+}
