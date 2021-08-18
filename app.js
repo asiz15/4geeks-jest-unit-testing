@@ -5,7 +5,7 @@ let oneEuroIs = {
     "GBP": 0.8, // british pound
 }
 
- function fromEuroToDollar(ammount = 0) {
+const fromEuroToDollar = (ammount = 0) => {
 
     return {
         ammount: +(ammountValidator(ammount) * oneEuroIs.USD).toFixed(1),
