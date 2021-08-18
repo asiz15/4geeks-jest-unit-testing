@@ -7,9 +7,8 @@ let oneEuroIs = {
 
  function fromEuroToDollar(ammount = 0) {
 
-    const parsedAmmount = ammountValidator(ammount)
     return {
-        ammount: +(parsedAmmount * oneEuroIs.USD).toFixed(1),
+        ammount: +(ammountValidator(ammount) * oneEuroIs.USD).toFixed(1),
         currency: 'USD',
         symbol: '$',
         mode: 'EUR-USD'
@@ -26,12 +25,10 @@ const fromDollarToYen = (ammount) => {
     }
 }
 const fromYanToPound = (ammount) => {
-    const parsedAmmount = ammountValidator(ammount)
-    const inEUR = +(parsedAmmount / oneEuroIs.JPY).toFixed(1)
-    const inGBP = inEUR * oneEuroIs.GBP.toFixed(1)
+    const inEUR = +(ammountValidator(ammount) / oneEuroIs.JPY).toFixed(1)
     
     return {
-        ammount: inGBP,
+        ammount: +(inEUR * oneEuroIs.GBP).toFixed(1),
         currency: 'GBP',
         symbol: '£',
         mode: 'JPY-GBP'
